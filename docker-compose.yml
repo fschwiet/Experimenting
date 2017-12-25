@@ -6,6 +6,13 @@ services:
      - "8080:8080"
   nancytemplate:
     build: ./NancyApplication
-    image: appname:nancytag
+    image: nancyappname:nancytag
     ports:
      - "8081:80"
+  mailhog:
+    build: ./MailHog
+    image: mailhog:testing
+    ports:
+     - "1025:1025"
+     - "8025:8025"
+         
