@@ -1,4 +1,11 @@
 version: '3'
 services:
-  redis:
+  ravendb:
     image: "ravendb/ravendb:ubuntu-latest"
+    ports:
+     - "8080:8080"
+  nancytemplate:
+    build: ./NancyApplication
+    image: appname:nancytag
+    ports:
+     - "8081:80"
